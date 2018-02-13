@@ -64,6 +64,7 @@ namespace Plugin.ScreenCapturing
         public async Task<byte[]> CaptureAsync(Xamarin.Forms.View fView)
         {
              var view = UIApplication.SharedApplication.KeyWindow.RootViewController.View;
+            //If You Want to capture WebView It "fView"
             //var view = ConvertFormsToNative(fView, new CGRect(fView.X, fView.Y, fView.Height, fView.Width));
             UIGraphics.BeginImageContext(view.Frame.Size);
             view.DrawViewHierarchy(view.Frame, true);
