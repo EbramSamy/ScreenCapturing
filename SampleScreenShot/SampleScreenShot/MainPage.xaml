@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SampleScreenShot.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SampleScreenShot">
+
+    <StackLayout
+        x:Name="stack"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand">
+        <WebView
+            x:Name="webView"
+            HeightRequest="800"
+            Source="https://www.youtube.com/"
+            WidthRequest="800" />
+        <Frame BackgroundColor="Yellow" CornerRadius="50">
+            <Image
+                x:Name="IncidentImageData"
+                Aspect="AspectFill"
+                HeightRequest="250"
+                WidthRequest="250" />
+        </Frame>
+        <Label x:Name="label" />
+        <Button Clicked="Button_Clicked" Text="Take Screenshot!" />
+    </StackLayout>
+
+</ContentPage>
